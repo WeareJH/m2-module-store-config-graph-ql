@@ -1,4 +1,4 @@
-# JH Social Links GraphQL Module #
+# JH Store Config GraphQL Module #
 
 ## Overview
 This module exposes extra store configuration values in GraphQl
