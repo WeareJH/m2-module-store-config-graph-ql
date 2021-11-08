@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\StoreGraphQl\Model\Resolver\Store\StoreConfigDataProvider">
+        <arguments>
+            <argument name="extendedConfigData">
+                <item name="store_name" xsi:type="string">general/store_information/name</item>
+                <item name="store_phone_number" xsi:type="string">general/store_information/phone</item>
+                <item name="store_hours" xsi:type="string">general/store_information/hours</item>
+                <item name="store_country_id" xsi:type="string">general/store_information/country_id</item>
+                <item name="store_region_id" xsi:type="string">general/store_information/region_id</item>
+                <item name="store_postcode" xsi:type="string">general/store_information/postcode</item>
+                <item name="store_city" xsi:type="string">general/store_information/city</item>
+                <item name="store_street_line1" xsi:type="string">general/store_information/street_line1</item>
+                <item name="store_street_line2" xsi:type="string">general/store_information/street_line2</item>
+                <item name="store_vat_number" xsi:type="string">general/store_information/merchant_vat_number</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

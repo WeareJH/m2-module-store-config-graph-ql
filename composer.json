@@ -1,0 +1,15 @@
+{
+  "name": "wearejh/m2-module-store-config-graph-ql",
+  "description": "This module exposes extra store configuration values in GraphQl.",
+  "type": "magento2-module",
+  "require": {
+    "php": ">=7.0.0",
+    "magento/module-store-graph-ql": "*"
+  },
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "Jh\\StoreConfigGraphQl\\": ""
+    }
+  }
+}

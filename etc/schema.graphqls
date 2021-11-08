@@ -1,0 +1,12 @@
+type StoreConfig {
+    store_name: String @doc(description: "general/store_information/name")
+    store_phone_number: String @doc(description: "general/store_information/phone")
+    store_hours: String @doc(description: "general/store_information/hours")
+    store_country_id: String @doc(description: "general/store_information/country_id")
+    store_region_id: String @doc(description: "general/store_information/region_id")
+    store_postcode: String @doc(description: "general/store_information/postcode")
+    store_city: String @doc(description: "general/store_information/city")
+    store_street_line1: String @doc(description: "general/store_information/street_line1")
+    store_street_line2: String @doc(description: "general/store_information/street_line2")
+    store_vat_number: String @doc(description: "general/store_information/merchant_vat_number")
+}
