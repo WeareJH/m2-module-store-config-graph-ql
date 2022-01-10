@@ -9,4 +9,6 @@ type StoreConfig {
     store_street_line1: String @doc(description: "general/store_information/street_line1")
     store_street_line2: String @doc(description: "general/store_information/street_line2")
     store_vat_number: String @doc(description: "general/store_information/merchant_vat_number")
+    site_banner_enabled: Boolean @doc(description: "banner/options/is_enabled")
+    site_banner_content: String @doc(description: "banner/options/banner_content")
 }

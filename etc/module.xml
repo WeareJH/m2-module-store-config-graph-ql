@@ -3,6 +3,7 @@
     <module name="Jh_StoreConfigGraphQl">
         <sequence>
             <module name="Magento_StoreGraphQl"/>
+            <module name="Jh_Toolkit"/>
         </sequence>
     </module>
 </config>

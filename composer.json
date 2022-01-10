@@ -4,12 +4,16 @@
   "type": "magento2-module",
   "require": {
     "php": ">=7.0.0",
-    "magento/module-store-graph-ql": "*"
+    "magento/module-store-graph-ql": "*",
+    "wearejh/m2-module-toolkit": "*"
   },
   "autoload": {
     "files": [ "registration.php" ],
     "psr-4": {
       "Jh\\StoreConfigGraphQl\\": ""
     }
-  }
+  },
+  "repositories": [
+    {"type": "vcs", "url": "git@github.com:WeareJH/m2-module-jh-toolkit.git"}
+  ]
 }

@@ -13,7 +13,14 @@
                 <item name="store_street_line1" xsi:type="string">general/store_information/street_line1</item>
                 <item name="store_street_line2" xsi:type="string">general/store_information/street_line2</item>
                 <item name="store_vat_number" xsi:type="string">general/store_information/merchant_vat_number</item>
+                <item name="site_banner_enabled" xsi:type="string">banner/options/is_enabled</item>
+                <item name="site_banner_content" xsi:type="string">banner/options/banner_content</item>
             </argument>
         </arguments>
+    </type>
+
+    <type name="Magento\StoreGraphQl\Model\Resolver\Store\StoreConfigDataProvider">
+        <plugin name="Jh_StoreConfigGraphQl::update_logo_url"
+                type="Jh\StoreConfigGraphQl\Plugin\UpdateStoreLogoUrl" sortOrder="10"/>
     </type>
 </config>

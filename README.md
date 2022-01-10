@@ -19,6 +19,8 @@ This module exposes extra store configuration values in GraphQl
     store_street_line1
     store_street_line2
     store_vat_number
+    site_banner_enabled
+    site_banner_content
   }
 }
 ```
