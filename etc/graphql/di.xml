@@ -13,8 +13,24 @@
                 <item name="store_street_line1" xsi:type="string">general/store_information/street_line1</item>
                 <item name="store_street_line2" xsi:type="string">general/store_information/street_line2</item>
                 <item name="store_vat_number" xsi:type="string">general/store_information/merchant_vat_number</item>
-                <item name="site_banner_enabled" xsi:type="string">banner/options/is_enabled</item>
-                <item name="site_banner_content" xsi:type="string">banner/options/banner_content</item>
+                <item name="site_banner_enabled" xsi:type="string">banner_usps/banner/is_enabled</item>
+                <item name="site_banner_content" xsi:type="string">banner_usps/banner/banner_content</item>
+                <item name="usp_1_enabled" xsi:type="string">banner_usps/usp_1/is_enabled</item>
+                <item name="usp_1_title" xsi:type="string">banner_usps/usp_1/title</item>
+                <item name="usp_1_description" xsi:type="string">banner_usps/usp_1/description</item>
+                <item name="usp_1_image" xsi:type="string">banner_usps/usp_1/image</item>
+                <item name="usp_2_enabled" xsi:type="string">banner_usps/usp_2/is_enabled</item>
+                <item name="usp_2_title" xsi:type="string">banner_usps/usp_2/title</item>
+                <item name="usp_2_description" xsi:type="string">banner_usps/usp_2/description</item>
+                <item name="usp_2_image" xsi:type="string">banner_usps/usp_2/image</item>
+                <item name="usp_3_enabled" xsi:type="string">banner_usps/usp_3/is_enabled</item>
+                <item name="usp_3_title" xsi:type="string">banner_usps/usp_3/title</item>
+                <item name="usp_3_description" xsi:type="string">banner_usps/usp_3/description</item>
+                <item name="usp_3_image" xsi:type="string">banner_usps/usp_3/image</item>
+                <item name="usp_4_enabled" xsi:type="string">banner_usps/usp_4/is_enabled</item>
+                <item name="usp_4_title" xsi:type="string">banner_usps/usp_4/title</item>
+                <item name="usp_4_description" xsi:type="string">banner_usps/usp_4/description</item>
+                <item name="usp_4_image" xsi:type="string">banner_usps/usp_4/image</item>
             </argument>
         </arguments>
     </type>
@@ -22,5 +38,7 @@
     <type name="Magento\StoreGraphQl\Model\Resolver\Store\StoreConfigDataProvider">
         <plugin name="Jh_StoreConfigGraphQl::update_logo_url"
                 type="Jh\StoreConfigGraphQl\Plugin\UpdateStoreLogoUrl" sortOrder="10"/>
+        <plugin name="Jh_StoreConfigGraphQl::make_usps_full_urls"
+                type="Jh\StoreConfigGraphQl\Plugin\MakeUspImageFullUrl" sortOrder="20"/>
     </type>
 </config>

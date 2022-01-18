@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <section id="banner" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+        <section id="banner_usps" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
-            <label>Site-wide Banner</label>
+            <label>Site-wide Banners and USPs</label>
             <tab>wearejh</tab>
             <resource>Jh_StoreConfigGraphQl::config_banner</resource>
-            <group id="options" translate="label" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10">
+            <group id="banner" translate="label" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10">
                 <label>Site-wide Banner Options</label>
                 <field id="is_enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enabled</label>
@@ -15,6 +15,122 @@
                 <field id="banner_content" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Banner Content</label>
                     <comment>HTML is allowed</comment>
+                    <depends>
+                        <field id="*/*/is_enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="usp_1" translate="label" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10">
+                <label>First USP</label>
+                <field id="is_enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>USP title</label>
+                    <depends>
+                        <field id="*/*/is_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="description" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>USP description</label>
+                    <depends>
+                        <field id="*/*/is_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="image" translate="label" type="Magento\Config\Block\System\Config\Form\Field\Image" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>USP image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">usps</base_url>
+                    <validate>required-entry</validate>
+                    <upload_dir config="system" scope_info="1">usps</upload_dir>
+                    <depends>
+                        <field id="*/*/is_enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="usp_2" translate="label" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10">
+                <label>Second USP</label>
+                <field id="is_enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>USP title</label>
+                    <depends>
+                        <field id="*/*/is_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="description" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>USP description</label>
+                    <depends>
+                        <field id="*/*/is_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="image" translate="label" type="Magento\Config\Block\System\Config\Form\Field\Image" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>USP image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">usps</base_url>
+                    <validate>required-entry</validate>
+                    <upload_dir config="system" scope_info="1">usps</upload_dir>
+                    <depends>
+                        <field id="*/*/is_enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="usp_3" translate="label" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10">
+                <label>Third USP</label>
+                <field id="is_enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>USP title</label>
+                    <depends>
+                        <field id="*/*/is_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="description" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>USP description</label>
+                    <depends>
+                        <field id="*/*/is_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="image" translate="label" type="Magento\Config\Block\System\Config\Form\Field\Image" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>USP image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">usps</base_url>
+                    <validate>required-entry</validate>
+                    <upload_dir config="system" scope_info="1">usps</upload_dir>
+                    <depends>
+                        <field id="*/*/is_enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="usp_4" translate="label" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10">
+                <label>Fourth USP</label>
+                <field id="is_enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>USP title</label>
+                    <depends>
+                        <field id="*/*/is_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="description" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>USP description</label>
+                    <depends>
+                        <field id="*/*/is_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="image" translate="label" type="Magento\Config\Block\System\Config\Form\Field\Image" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>USP image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">usps</base_url>
+                    <validate>required-entry</validate>
+                    <upload_dir config="system" scope_info="1">usps</upload_dir>
                     <depends>
                         <field id="*/*/is_enabled">1</field>
                     </depends>

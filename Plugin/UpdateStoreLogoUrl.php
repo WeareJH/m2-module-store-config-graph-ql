@@ -12,9 +12,8 @@ class UpdateStoreLogoUrl
 {
     private UrlInterface $url;
 
-    public function __construct(
-        UrlInterface $url
-    ) {
+    public function __construct(UrlInterface $url)
+    {
         $this->url = $url;
     }
 
