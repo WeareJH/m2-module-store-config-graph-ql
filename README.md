@@ -1,7 +1,8 @@
 # JH Store Config GraphQL Module #
 
 ## Overview
-This module exposes extra store configuration values in GraphQl
+This module exposes extra store configuration values in GraphQl and adds extra features common between
+Axel projects.
 
 ## Exposed data
 
@@ -24,3 +25,7 @@ This module exposes extra store configuration values in GraphQl
   }
 }
 ```
+
+## Category display mode
+
+Adds `LANDING` as a new display mode for a category.
